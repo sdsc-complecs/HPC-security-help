@@ -1,0 +1,541 @@
+---- BEGIN Slurm, hardware and environment information ----
+SLURM_JOB_ID: 28338360
+SLURM_JOB_NODELIST: exp-9-[43-44]
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              128
+On-line CPU(s) list: 0-127
+Thread(s) per core:  1
+Core(s) per socket:  64
+Socket(s):           2
+NUMA node(s):        8
+Vendor ID:           AuthenticAMD
+CPU family:          23
+Model:               49
+Model name:          AMD EPYC 7742 64-Core Processor
+Stepping:            0
+CPU MHz:             2245.818
+BogoMIPS:            4491.63
+Virtualization:      AMD-V
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            16384K
+NUMA node0 CPU(s):   0-15
+NUMA node1 CPU(s):   16-31
+NUMA node2 CPU(s):   32-47
+NUMA node3 CPU(s):   48-63
+NUMA node4 CPU(s):   64-79
+NUMA node5 CPU(s):   80-95
+NUMA node6 CPU(s):   96-111
+NUMA node7 CPU(s):   112-127
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sme sev sev_es
+SLURM_MPI_TYPE=pmi2
+CONDA_SHLVL=1
+LD_LIBRARY_PATH=/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/lib:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/lib64:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/lib
+LS_COLORS=rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+CONDA_EXE=/home/sinkovit/miniconda3/bin/conda
+SLURM_NODEID=0
+SLURM_TASK_PID=28185
+__LMOD_REF_COUNT_PATH=/cm/shared/apps/slurm/current/sbin:1;/cm/shared/apps/slurm/current/bin:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin:1;/home/sinkovit/miniconda3/bin:1;/home/sinkovit/miniconda3/condabin:1;/home/sinkovit/spack/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/home/sinkovit/.local/bin:1;/home/sinkovit/bin:1
+_ModuleTable002_=c3BhY2svMC4xNy4zL2NwdS9iL3NoYXJlL3NwYWNrL2xtb2QvbGludXgtcm9ja3k4LXg4Nl82NC9Db3JlL2djYy8xMC4yLjAvbnBjeWxsNC5sdWEiLFsiZnVsbE5hbWUiXT0iZ2NjLzEwLjIuMC9ucGN5bGw0IixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2NjLzEwLjIuMCIsfSxbIm12YXBpY2gyLzIuMy43Il09e1siZm4iXT0iL2NtL3NoYXJlZC9hcHBzL3NwYWNrLzAuMTcuMy9jcHUvYi9zaGFyZS9zcGFjay9sbW9kL2xpbnV4LXJvY2t5OC14ODZfNjQvZ2NjLzEwLjIuMC9tdmFwaWNoMi8yLjMuNy9peWp0bjN4Lmx1YSIsWyJmdWxsTmFtZSJdPSJtdmFwaWNoMi8yLjMuNy9peWp0bjN4
+SSH_CONNECTION=76.176.196.82 49481 198.202.100.13 22
+SLURM_PRIO_PROCESS=0
+LMOD_FAMILY_MPI_VERSION=iyjtn3x
+LANG=en_US.UTF-8
+SLURM_SUBMIT_DIR=/home/sinkovit/HELLO_MPI
+HISTCONTROL=ignoredups
+DISPLAY=localhost:25.0
+LMOD_FAMILY_COMPILER_VERSION=npcyll4
+HOSTNAME=exp-9-43
+LMOD_SYSTEM_DEFAULT_MODULES=DefaultModules
+OLDPWD=/home/sinkovit
+__LMOD_REF_COUNT__LMFILES_=/usr/share/modulefiles/cpu/0.17.3b.lua:1;/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/Core/gcc/10.2.0/npcyll4.lua:1;/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0/mvapich2/2.3.7/iyjtn3x.lua:1;/cm/local/modulefiles/slurm/expanse/23.02.6:1
+ENVIRONMENT=BATCH
+CONDA_PREFIX=/home/sinkovit/miniconda3
+SLURM_PROCID=0
+SLURM_JOB_GID=300
+MV2_USE_RDMA_CM=0
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/cm/shared/apps/slurm/current/lib64/slurm:1;/cm/shared/apps/slurm/current/lib64:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/lib:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/lib64:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/lib:1
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/lib/pkgconfig:1
+SLURMD_NODENAME=exp-9-43
+SLURM_JOB_END_TIME=1706558558
+_ModuleTable004_=Z2NjLzEwLjIuMCIsIi9jbS9zaGFyZWQvYXBwcy9zcGFjay8wLjE3LjMvY3B1L2Ivc2hhcmUvc3BhY2svbG1vZC9saW51eC1yb2NreTgteDg2XzY0L2djYy8xMC4yLjAiLCIvY20vc2hhcmVkL2FwcHMvc3BhY2svMC4xNy4zL2NwdS9iL3NoYXJlL3NwYWNrL2xtb2QvbGludXgtcm9ja3k4LXg4Nl82NC9Db3JlIiwiL2NtL2xvY2FsL21vZHVsZWZpbGVzIiwiL2NtL3NoYXJlZC9hcHBzL2FjY2Vzcy9tb2R1bGVmaWxlcyIsIi9ldGMvbW9kdWxlZmlsZXMiLCIvdXNyL3NoYXJlL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9Nb2R1bGVzL21vZHVsZWZpbGVzIiwiL2NtL3NoYXJlZC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvY20vbG9jYWwvbW9kdWxlZmlsZXM6
+SLURM_TASKS_PER_NODE=128(x2)
+S_COLORS=auto
+_CE_M=
+which_declare=declare -f
+MVAPICH2HOME=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3
+CC=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin/gcc
+MPIF90=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin/mpif90
+XDG_SESSION_ID=328141
+SLURM_NNODES=2
+USER=sinkovit
+MPICXX=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin/mpicxx
+SLURM_JOB_START_TIME=1706558498
+SLURM_NTASKS_PER_NODE=128
+__LMOD_REF_COUNT_MODULEPATH=/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/mvapich2/2.3.7-iyjtn3x/gcc/10.2.0:1;/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0:1;/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/Core:1;/cm/local/modulefiles:1;/cm/shared/apps/access/modulefiles:1;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/share/Modules/modulefiles:1;/cm/shared/modulefiles:1
+__LMOD_REF_COUNT_LOADEDMODULES=cpu/0.17.3b:1;gcc/10.2.0/npcyll4:1;mvapich2/2.3.7/iyjtn3x:1;slurm/expanse/23.02.6:1
+PWD=/home/sinkovit/HELLO_MPI
+ENABLE_LMOD=1
+SLURM_JOB_NODELIST=exp-9-[43-44]
+HOME=/home/sinkovit
+SLURM_CLUSTER_NAME=expanse
+CONDA_PYTHON_EXE=/home/sinkovit/miniconda3/bin/python
+CMAKE_PREFIX_PATH=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd
+LMOD_COLORIZE=yes
+SLURM_NODELIST=exp-9-[43-44]
+LMOD_SYSHOST=expanse
+SSH_CLIENT=76.176.196.82 49481 22
+MV2_SUPPRESS_JOB_STARTUP_PERFORMANCE_WARNING=1
+LMOD_VERSION=8.2.4
+CPATH=/cm/shared/apps/slurm/current/include
+SLURM_NTASKS=256
+LMOD_SETTARG_CMD=:
+F77=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin/gfortran
+SLURM_JOB_CPUS_PER_NODE=128(x2)
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+LMOD_MPI_VERSION=2.3.7-iyjtn3x
+SDSC_SPACK_STACK=cpu
+SLURM_TOPOLOGY_ADDR=exp-9-43
+_CE_CONDA=
+SLURM_WORKING_CLUSTER=expanse:mgr1:6817:9984:109
+__LMOD_REF_COUNT_LIBRARY_PATH=/cm/shared/apps/slurm/current/lib64/slurm:1;/cm/shared/apps/slurm/current/lib64:1
+SLURM_JOB_NAME=hellompi
+TMPDIR=/tmp
+LIBRARY_PATH=/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64
+__LMOD_REF_COUNT_CMAKE_PREFIX_PATH=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd:1
+LMOD_sys=Linux
+SLURM_JOBID=28338360
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPTg2NDAwLFsiY19zaG9ydFRpbWUiXT0wLjkxMTkxNjAxNzUzMjM1LGRlcHRoVD17fSxmYW1pbHk9e1siY29tcGlsZXIiXT0iZ2NjLzEwLjIuMCIsWyJtcGkiXT0ibXZhcGljaDIvMi4zLjciLH0sbVQ9e2NwdT17WyJmbiJdPSIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL2NwdS8wLjE3LjNiLmx1YSIsWyJmdWxsTmFtZSJdPSJjcHUvMC4xNy4zYiIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXthcmNoPXtbImNwdSJdPTEsfSx9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNwdSIsfSxbImdjYy8xMC4yLjAiXT17WyJmbiJdPSIvY20vc2hhcmVkL2FwcHMv
+SLURM_CONF=/cm/shared/apps/slurm/var/etc/expanse/slurm.conf
+LOADEDMODULES=cpu/0.17.3b:gcc/10.2.0/npcyll4:mvapich2/2.3.7/iyjtn3x:slurm/expanse/23.02.6
+FC=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin/gfortran
+__LMOD_REF_COUNT_MANPATH=/cm/shared/apps/slurm/current/man:2;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/share/man:1;/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/share/man:1;/usr/share/lmod/lmod/share/man:1;/usr/local/share/man:1;/usr/share/man:1;/cm/local/apps/environment-modules/current/share/man:1
+_ModuleTable003_=IixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibXZhcGljaDIvMi4zLjciLH0sc2x1cm09e1siZm4iXT0iL2NtL2xvY2FsL21vZHVsZWZpbGVzL3NsdXJtL2V4cGFuc2UvMjMuMDIuNiIsWyJmdWxsTmFtZSJdPSJzbHVybS9leHBhbnNlLzIzLjAyLjYiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzbHVybSIsfSx9LG1wYXRoQT17Ii9jbS9zaGFyZWQvYXBwcy9zcGFjay8wLjE3LjMvY3B1L2Ivc2hhcmUvc3BhY2svbG1vZC9saW51eC1yb2NreTgteDg2XzY0L212YXBpY2gyLzIuMy43LWl5anRuM3gv
+SLURM_NODE_ALIASES=(null)
+MPICC=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin/mpicc
+SLURM_JOB_QOS=normal-qos
+LMOD_ROOT=/usr/share/lmod
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+CONDA_PROMPT_MODIFIER=(base) 
+SSH_TTY=/dev/pts/218
+MAIL=/var/spool/mail/sinkovit
+SLURM_CPUS_ON_NODE=128
+CXX=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin/g++
+LMOD_arch=x86_64
+SLURM_JOB_NUM_NODES=2
+__Init_Default_Modules=1
+CMD_WLM_CLUSTER_NAME=expanse
+SLURM_MEM_PER_NODE=249000
+SPACK_ROOT=/home/sinkovit/spack
+SHELL=/bin/bash
+TERM=xterm-256color
+SLURM_JOB_UID=15295
+_ModuleTable_Sz_=5
+__LMOD_REF_COUNT_CPATH=/cm/shared/apps/slurm/current/include:1
+SLURM_JOB_PARTITION=compute
+LMOD_FAMILY_COMPILER=gcc/10.2.0
+SLURM_JOB_USER=sinkovit
+SLURM_NPROCS=256
+SHLVL=2
+SLURM_SUBMIT_HOST=login01
+MPIF77=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin/mpif77
+SLURM_JOB_ACCOUNT=use300
+MANPATH=/cm/shared/apps/slurm/current/man:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/share/man:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/share/man:/usr/share/lmod/lmod/share/man::/usr/local/share/man:/usr/share/man:/cm/local/apps/environment-modules/current/share/man
+LMOD_PREPEND_BLOCK=normal
+MODULEPATH=/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/mvapich2/2.3.7-iyjtn3x/gcc/10.2.0:/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0:/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/Core:/cm/local/modulefiles:/cm/shared/apps/access/modulefiles:/etc/modulefiles:/usr/share/modulefiles:/usr/share/Modules/modulefiles:/cm/shared/modulefiles
+GDK_BACKEND=x11
+SLURM_GTIDS=0
+LOGNAME=sinkovit
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cmzov6fPYB,guid=f4b4e77908658af7b4254d7f65b7faf3
+XDG_RUNTIME_DIR=/run/user/15295
+MODULEPATH_ROOT=/usr/share/modulefiles
+LMOD_PACKAGE_PATH=/usr/share/lmod/etc/site/lmod
+LMOD_MPI_NAME=mvapich2
+PATH=/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/bin:/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd/bin:/home/sinkovit/miniconda3/bin:/home/sinkovit/miniconda3/condabin:/home/sinkovit/spack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/sinkovit/.local/bin:/home/sinkovit/bin
+SLURM_JOB_ID=28338360
+_LMFILES_=/usr/share/modulefiles/cpu/0.17.3b.lua:/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/Core/gcc/10.2.0/npcyll4.lua:/cm/shared/apps/spack/0.17.3/cpu/b/share/spack/lmod/linux-rocky8-x86_64/gcc/10.2.0/mvapich2/2.3.7/iyjtn3x.lua:/cm/local/modulefiles/slurm/expanse/23.02.6
+DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
+GCCHOME=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen/gcc-8.5.0/gcc-10.2.0-npcyll4gxjhf4tejksmdzlsl3d3usqpd
+MODULESHOME=/usr/share/lmod/lmod
+PKG_CONFIG_PATH=/cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/mvapich2-2.3.7-iyjtn3xw22c6k4c564liplbsh7fdtmo3/lib/pkgconfig
+LMOD_SETTARG_FULL_SUPPORT=no
+CONDA_DEFAULT_ENV=base
+HISTSIZE=1000
+LMOD_PKG=/usr/share/lmod/lmod
+_ModuleTable005_=L2NtL3NoYXJlZC9hcHBzL2FjY2Vzcy9tb2R1bGVmaWxlczovY20vc2hhcmVkL21vZHVsZWZpbGVzOi9ldGMvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlczovdXNyL3NoYXJlL01vZHVsZXMvbW9kdWxlZmlsZXMiLH0=
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+SLURM_LOCALID=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_FULL_SETTARG_SUPPORT=no
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+LMOD_FAMILY_MPI=mvapich2/2.3.7
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+BASH_FUNC_module%%=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_spack%%=() {  : this is a shell function from: /home/sinkovit/spack/share/spack/setup-env.sh;
+ : the real spack script is here: /home/sinkovit/spack/bin/spack;
+ _spack_shell_wrapper "$@";
+ return $?
+}
+BASH_FUNC__spack_shell_wrapper%%=() {  for var in LD_LIBRARY_PATH DYLD_LIBRARY_PATH DYLD_FALLBACK_LIBRARY_PATH;
+ do
+ eval "if [ -n \"\${${var}-}\" ]; then export SPACK_$var=\${${var}}; fi";
+ done;
+ if [ -n "${ZSH_VERSION:-}" ]; then
+ emulate -L sh;
+ fi;
+ _sp_flags="";
+ while [ ! -z ${1+x} ] && [ "${1#-}" != "${1}" ]; do
+ _sp_flags="$_sp_flags $1";
+ shift;
+ done;
+ if [ -n "$_sp_flags" ] && [ "${_sp_flags#*h}" != "${_sp_flags}" ] || [ "${_sp_flags#*V}" != "${_sp_flags}" ]; then
+ command spack $_sp_flags "$@";
+ return;
+ fi;
+ _sp_subcommand="";
+ if [ ! -z ${1+x} ]; then
+ _sp_subcommand="$1";
+ shift;
+ fi;
+ case $_sp_subcommand in 
+ "cd")
+ _sp_arg="";
+ if [ -n "$1" ]; then
+ _sp_arg="$1";
+ shift;
+ fi;
+ if [ "$_sp_arg" = "-h" ] || [ "$_sp_arg" = "--help" ]; then
+ command spack cd -h;
+ else
+ LOC="$(spack location $_sp_arg "$@")";
+ if [ -d "$LOC" ]; then
+ cd "$LOC";
+ else
+ return 1;
+ fi;
+ fi;
+ return
+ ;;
+ "env")
+ _sp_arg="";
+ if [ -n "$1" ]; then
+ _sp_arg="$1";
+ shift;
+ fi;
+ if [ "$_sp_arg" = "-h" ] || [ "$_sp_arg" = "--help" ]; then
+ command spack env -h;
+ else
+ case $_sp_arg in 
+ activate)
+ _a=" $@";
+ if [ -z ${1+x} ] || [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ] || [ "${_a#* -h}" != "$_a" ] || [ "${_a#* --help}" != "$_a" ]; then
+ command spack env activate "$@";
+ else
+ eval $(command spack $_sp_flags env activate --sh "$@");
+ fi
+ ;;
+ deactivate)
+ _a=" $@";
+ if [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ]; then
+ command spack env deactivate "$@";
+ else
+ if [ -n "$*" ]; then
+ command spack env deactivate -h;
+ else
+ eval $(command spack $_sp_flags env deactivate --sh);
+ fi;
+ fi
+ ;;
+ *)
+ command spack env $_sp_arg "$@"
+ ;;
+ esac;
+ fi;
+ return
+ ;;
+ "load" | "unload")
+ _a=" $@";
+ if [ "${_a#* --sh}" != "$_a" ] || [ "${_a#* --csh}" != "$_a" ] || [ "${_a#* -h}" != "$_a" ] || [ "${_a#* --help}" != "$_a" ]; then
+ command spack $_sp_flags $_sp_subcommand "$@";
+ else
+ eval $(command spack $_sp_flags $_sp_subcommand --sh "$@" ||                     echo "return 1");
+ fi
+ ;;
+ *)
+ command spack $_sp_flags $_sp_subcommand "$@"
+ ;;
+ esac
+}
+BASH_FUNC_ml%%=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/printenv
+---- END Slurm, hardware and environment information ----
+
+Hello world from processor exp-9-44, rank 130 out of 256 processors
+Hello world from processor exp-9-43, rank 0 out of 256 processors
+Hello world from processor exp-9-44, rank 128 out of 256 processors
+Hello world from processor exp-9-44, rank 129 out of 256 processors
+Hello world from processor exp-9-44, rank 255 out of 256 processors
+Hello world from processor exp-9-43, rank 2 out of 256 processors
+Hello world from processor exp-9-43, rank 1 out of 256 processors
+Hello world from processor exp-9-43, rank 127 out of 256 processors
+Hello world from processor exp-9-44, rank 131 out of 256 processors
+Hello world from processor exp-9-43, rank 3 out of 256 processors
+Hello world from processor exp-9-44, rank 133 out of 256 processors
+Hello world from processor exp-9-44, rank 132 out of 256 processors
+Hello world from processor exp-9-44, rank 134 out of 256 processors
+Hello world from processor exp-9-44, rank 136 out of 256 processors
+Hello world from processor exp-9-44, rank 139 out of 256 processors
+Hello world from processor exp-9-44, rank 141 out of 256 processors
+Hello world from processor exp-9-44, rank 135 out of 256 processors
+Hello world from processor exp-9-44, rank 137 out of 256 processors
+Hello world from processor exp-9-44, rank 138 out of 256 processors
+Hello world from processor exp-9-44, rank 140 out of 256 processors
+Hello world from processor exp-9-44, rank 150 out of 256 processors
+Hello world from processor exp-9-44, rank 145 out of 256 processors
+Hello world from processor exp-9-44, rank 142 out of 256 processors
+Hello world from processor exp-9-44, rank 144 out of 256 processors
+Hello world from processor exp-9-44, rank 143 out of 256 processors
+Hello world from processor exp-9-44, rank 146 out of 256 processors
+Hello world from processor exp-9-44, rank 147 out of 256 processors
+Hello world from processor exp-9-44, rank 148 out of 256 processors
+Hello world from processor exp-9-44, rank 152 out of 256 processors
+Hello world from processor exp-9-44, rank 153 out of 256 processors
+Hello world from processor exp-9-44, rank 149 out of 256 processors
+Hello world from processor exp-9-44, rank 154 out of 256 processors
+Hello world from processor exp-9-44, rank 158 out of 256 processors
+Hello world from processor exp-9-44, rank 156 out of 256 processors
+Hello world from processor exp-9-44, rank 155 out of 256 processors
+Hello world from processor exp-9-44, rank 157 out of 256 processors
+Hello world from processor exp-9-44, rank 175 out of 256 processors
+Hello world from processor exp-9-44, rank 151 out of 256 processors
+Hello world from processor exp-9-44, rank 160 out of 256 processors
+Hello world from processor exp-9-44, rank 163 out of 256 processors
+Hello world from processor exp-9-44, rank 159 out of 256 processors
+Hello world from processor exp-9-44, rank 162 out of 256 processors
+Hello world from processor exp-9-44, rank 166 out of 256 processors
+Hello world from processor exp-9-44, rank 165 out of 256 processors
+Hello world from processor exp-9-44, rank 164 out of 256 processors
+Hello world from processor exp-9-44, rank 161 out of 256 processors
+Hello world from processor exp-9-44, rank 167 out of 256 processors
+Hello world from processor exp-9-44, rank 168 out of 256 processors
+Hello world from processor exp-9-44, rank 169 out of 256 processors
+Hello world from processor exp-9-44, rank 172 out of 256 processors
+Hello world from processor exp-9-44, rank 170 out of 256 processors
+Hello world from processor exp-9-44, rank 174 out of 256 processors
+Hello world from processor exp-9-44, rank 173 out of 256 processors
+Hello world from processor exp-9-44, rank 176 out of 256 processors
+Hello world from processor exp-9-44, rank 177 out of 256 processors
+Hello world from processor exp-9-44, rank 178 out of 256 processors
+Hello world from processor exp-9-44, rank 179 out of 256 processors
+Hello world from processor exp-9-44, rank 180 out of 256 processors
+Hello world from processor exp-9-44, rank 181 out of 256 processors
+Hello world from processor exp-9-44, rank 202 out of 256 processors
+Hello world from processor exp-9-44, rank 171 out of 256 processors
+Hello world from processor exp-9-44, rank 182 out of 256 processors
+Hello world from processor exp-9-44, rank 186 out of 256 processors
+Hello world from processor exp-9-44, rank 184 out of 256 processors
+Hello world from processor exp-9-44, rank 185 out of 256 processors
+Hello world from processor exp-9-44, rank 183 out of 256 processors
+Hello world from processor exp-9-44, rank 188 out of 256 processors
+Hello world from processor exp-9-44, rank 190 out of 256 processors
+Hello world from processor exp-9-44, rank 189 out of 256 processors
+Hello world from processor exp-9-44, rank 187 out of 256 processors
+Hello world from processor exp-9-44, rank 191 out of 256 processors
+Hello world from processor exp-9-44, rank 194 out of 256 processors
+Hello world from processor exp-9-44, rank 192 out of 256 processors
+Hello world from processor exp-9-44, rank 193 out of 256 processors
+Hello world from processor exp-9-44, rank 197 out of 256 processors
+Hello world from processor exp-9-44, rank 198 out of 256 processors
+Hello world from processor exp-9-44, rank 201 out of 256 processors
+Hello world from processor exp-9-44, rank 196 out of 256 processors
+Hello world from processor exp-9-44, rank 200 out of 256 processors
+Hello world from processor exp-9-44, rank 204 out of 256 processors
+Hello world from processor exp-9-44, rank 212 out of 256 processors
+Hello world from processor exp-9-44, rank 205 out of 256 processors
+Hello world from processor exp-9-44, rank 206 out of 256 processors
+Hello world from processor exp-9-44, rank 195 out of 256 processors
+Hello world from processor exp-9-44, rank 199 out of 256 processors
+Hello world from processor exp-9-44, rank 210 out of 256 processors
+Hello world from processor exp-9-44, rank 209 out of 256 processors
+Hello world from processor exp-9-44, rank 208 out of 256 processors
+Hello world from processor exp-9-44, rank 211 out of 256 processors
+Hello world from processor exp-9-44, rank 203 out of 256 processors
+Hello world from processor exp-9-44, rank 213 out of 256 processors
+Hello world from processor exp-9-44, rank 218 out of 256 processors
+Hello world from processor exp-9-44, rank 217 out of 256 processors
+Hello world from processor exp-9-44, rank 214 out of 256 processors
+Hello world from processor exp-9-44, rank 207 out of 256 processors
+Hello world from processor exp-9-44, rank 220 out of 256 processors
+Hello world from processor exp-9-44, rank 221 out of 256 processors
+Hello world from processor exp-9-44, rank 224 out of 256 processors
+Hello world from processor exp-9-44, rank 216 out of 256 processors
+Hello world from processor exp-9-44, rank 219 out of 256 processors
+Hello world from processor exp-9-44, rank 222 out of 256 processors
+Hello world from processor exp-9-44, rank 226 out of 256 processors
+Hello world from processor exp-9-44, rank 215 out of 256 processors
+Hello world from processor exp-9-44, rank 234 out of 256 processors
+Hello world from processor exp-9-44, rank 225 out of 256 processors
+Hello world from processor exp-9-44, rank 229 out of 256 processors
+Hello world from processor exp-9-44, rank 227 out of 256 processors
+Hello world from processor exp-9-44, rank 236 out of 256 processors
+Hello world from processor exp-9-44, rank 233 out of 256 processors
+Hello world from processor exp-9-44, rank 228 out of 256 processors
+Hello world from processor exp-9-44, rank 230 out of 256 processors
+Hello world from processor exp-9-44, rank 232 out of 256 processors
+Hello world from processor exp-9-44, rank 223 out of 256 processors
+Hello world from processor exp-9-44, rank 244 out of 256 processors
+Hello world from processor exp-9-44, rank 235 out of 256 processors
+Hello world from processor exp-9-44, rank 237 out of 256 processors
+Hello world from processor exp-9-44, rank 242 out of 256 processors
+Hello world from processor exp-9-44, rank 238 out of 256 processors
+Hello world from processor exp-9-44, rank 241 out of 256 processors
+Hello world from processor exp-9-44, rank 231 out of 256 processors
+Hello world from processor exp-9-44, rank 240 out of 256 processors
+Hello world from processor exp-9-44, rank 243 out of 256 processors
+Hello world from processor exp-9-44, rank 239 out of 256 processors
+Hello world from processor exp-9-44, rank 245 out of 256 processors
+Hello world from processor exp-9-44, rank 246 out of 256 processors
+Hello world from processor exp-9-44, rank 248 out of 256 processors
+Hello world from processor exp-9-44, rank 249 out of 256 processors
+Hello world from processor exp-9-44, rank 253 out of 256 processors
+Hello world from processor exp-9-44, rank 252 out of 256 processors
+Hello world from processor exp-9-44, rank 251 out of 256 processors
+Hello world from processor exp-9-44, rank 254 out of 256 processors
+Hello world from processor exp-9-44, rank 247 out of 256 processors
+Hello world from processor exp-9-43, rank 5 out of 256 processors
+Hello world from processor exp-9-43, rank 4 out of 256 processors
+Hello world from processor exp-9-43, rank 42 out of 256 processors
+Hello world from processor exp-9-43, rank 8 out of 256 processors
+Hello world from processor exp-9-43, rank 11 out of 256 processors
+Hello world from processor exp-9-43, rank 10 out of 256 processors
+Hello world from processor exp-9-43, rank 7 out of 256 processors
+Hello world from processor exp-9-43, rank 6 out of 256 processors
+Hello world from processor exp-9-43, rank 12 out of 256 processors
+Hello world from processor exp-9-43, rank 9 out of 256 processors
+Hello world from processor exp-9-43, rank 13 out of 256 processors
+Hello world from processor exp-9-43, rank 14 out of 256 processors
+Hello world from processor exp-9-43, rank 15 out of 256 processors
+Hello world from processor exp-9-43, rank 17 out of 256 processors
+Hello world from processor exp-9-43, rank 16 out of 256 processors
+Hello world from processor exp-9-43, rank 18 out of 256 processors
+Hello world from processor exp-9-43, rank 19 out of 256 processors
+Hello world from processor exp-9-43, rank 21 out of 256 processors
+Hello world from processor exp-9-43, rank 20 out of 256 processors
+Hello world from processor exp-9-43, rank 24 out of 256 processors
+Hello world from processor exp-9-43, rank 25 out of 256 processors
+Hello world from processor exp-9-43, rank 22 out of 256 processors
+Hello world from processor exp-9-43, rank 26 out of 256 processors
+Hello world from processor exp-9-43, rank 23 out of 256 processors
+Hello world from processor exp-9-43, rank 27 out of 256 processors
+Hello world from processor exp-9-43, rank 30 out of 256 processors
+Hello world from processor exp-9-43, rank 29 out of 256 processors
+Hello world from processor exp-9-43, rank 28 out of 256 processors
+Hello world from processor exp-9-43, rank 31 out of 256 processors
+Hello world from processor exp-9-43, rank 34 out of 256 processors
+Hello world from processor exp-9-43, rank 33 out of 256 processors
+Hello world from processor exp-9-43, rank 32 out of 256 processors
+Hello world from processor exp-9-43, rank 35 out of 256 processors
+Hello world from processor exp-9-43, rank 37 out of 256 processors
+Hello world from processor exp-9-43, rank 36 out of 256 processors
+Hello world from processor exp-9-43, rank 38 out of 256 processors
+Hello world from processor exp-9-43, rank 39 out of 256 processors
+Hello world from processor exp-9-43, rank 41 out of 256 processors
+Hello world from processor exp-9-43, rank 44 out of 256 processors
+Hello world from processor exp-9-43, rank 45 out of 256 processors
+Hello world from processor exp-9-43, rank 40 out of 256 processors
+Hello world from processor exp-9-43, rank 46 out of 256 processors
+Hello world from processor exp-9-43, rank 50 out of 256 processors
+Hello world from processor exp-9-43, rank 43 out of 256 processors
+Hello world from processor exp-9-43, rank 47 out of 256 processors
+Hello world from processor exp-9-43, rank 51 out of 256 processors
+Hello world from processor exp-9-43, rank 104 out of 256 processors
+Hello world from processor exp-9-43, rank 53 out of 256 processors
+Hello world from processor exp-9-43, rank 52 out of 256 processors
+Hello world from processor exp-9-43, rank 48 out of 256 processors
+Hello world from processor exp-9-43, rank 49 out of 256 processors
+Hello world from processor exp-9-43, rank 58 out of 256 processors
+Hello world from processor exp-9-43, rank 54 out of 256 processors
+Hello world from processor exp-9-43, rank 57 out of 256 processors
+Hello world from processor exp-9-43, rank 55 out of 256 processors
+Hello world from processor exp-9-43, rank 59 out of 256 processors
+Hello world from processor exp-9-43, rank 61 out of 256 processors
+Hello world from processor exp-9-43, rank 56 out of 256 processors
+Hello world from processor exp-9-43, rank 60 out of 256 processors
+Hello world from processor exp-9-43, rank 62 out of 256 processors
+Hello world from processor exp-9-43, rank 63 out of 256 processors
+Hello world from processor exp-9-43, rank 65 out of 256 processors
+Hello world from processor exp-9-43, rank 66 out of 256 processors
+Hello world from processor exp-9-43, rank 69 out of 256 processors
+Hello world from processor exp-9-43, rank 64 out of 256 processors
+Hello world from processor exp-9-43, rank 67 out of 256 processors
+Hello world from processor exp-9-43, rank 73 out of 256 processors
+Hello world from processor exp-9-43, rank 68 out of 256 processors
+Hello world from processor exp-9-43, rank 70 out of 256 processors
+Hello world from processor exp-9-43, rank 71 out of 256 processors
+Hello world from processor exp-9-43, rank 72 out of 256 processors
+Hello world from processor exp-9-43, rank 76 out of 256 processors
+Hello world from processor exp-9-43, rank 78 out of 256 processors
+Hello world from processor exp-9-43, rank 74 out of 256 processors
+Hello world from processor exp-9-43, rank 75 out of 256 processors
+Hello world from processor exp-9-43, rank 77 out of 256 processors
+Hello world from processor exp-9-43, rank 79 out of 256 processors
+Hello world from processor exp-9-43, rank 82 out of 256 processors
+Hello world from processor exp-9-43, rank 83 out of 256 processors
+Hello world from processor exp-9-43, rank 81 out of 256 processors
+Hello world from processor exp-9-43, rank 80 out of 256 processors
+Hello world from processor exp-9-43, rank 84 out of 256 processors
+Hello world from processor exp-9-43, rank 85 out of 256 processors
+Hello world from processor exp-9-43, rank 89 out of 256 processors
+Hello world from processor exp-9-43, rank 86 out of 256 processors
+Hello world from processor exp-9-43, rank 88 out of 256 processors
+Hello world from processor exp-9-43, rank 90 out of 256 processors
+Hello world from processor exp-9-43, rank 87 out of 256 processors
+Hello world from processor exp-9-43, rank 91 out of 256 processors
+Hello world from processor exp-9-43, rank 92 out of 256 processors
+Hello world from processor exp-9-43, rank 93 out of 256 processors
+Hello world from processor exp-9-43, rank 94 out of 256 processors
+Hello world from processor exp-9-43, rank 96 out of 256 processors
+Hello world from processor exp-9-43, rank 95 out of 256 processors
+Hello world from processor exp-9-43, rank 98 out of 256 processors
+Hello world from processor exp-9-43, rank 99 out of 256 processors
+Hello world from processor exp-9-43, rank 101 out of 256 processors
+Hello world from processor exp-9-43, rank 97 out of 256 processors
+Hello world from processor exp-9-43, rank 105 out of 256 processors
+Hello world from processor exp-9-43, rank 107 out of 256 processors
+Hello world from processor exp-9-43, rank 100 out of 256 processors
+Hello world from processor exp-9-43, rank 108 out of 256 processors
+Hello world from processor exp-9-43, rank 102 out of 256 processors
+Hello world from processor exp-9-43, rank 106 out of 256 processors
+Hello world from processor exp-9-43, rank 109 out of 256 processors
+Hello world from processor exp-9-43, rank 110 out of 256 processors
+Hello world from processor exp-9-43, rank 114 out of 256 processors
+Hello world from processor exp-9-43, rank 103 out of 256 processors
+Hello world from processor exp-9-43, rank 115 out of 256 processors
+Hello world from processor exp-9-43, rank 116 out of 256 processors
+Hello world from processor exp-9-43, rank 117 out of 256 processors
+Hello world from processor exp-9-43, rank 113 out of 256 processors
+Hello world from processor exp-9-43, rank 121 out of 256 processors
+Hello world from processor exp-9-43, rank 112 out of 256 processors
+Hello world from processor exp-9-43, rank 118 out of 256 processors
+Hello world from processor exp-9-43, rank 111 out of 256 processors
+Hello world from processor exp-9-43, rank 122 out of 256 processors
+Hello world from processor exp-9-43, rank 125 out of 256 processors
+Hello world from processor exp-9-43, rank 124 out of 256 processors
+Hello world from processor exp-9-43, rank 126 out of 256 processors
+Hello world from processor exp-9-43, rank 123 out of 256 processors
+Hello world from processor exp-9-43, rank 120 out of 256 processors
+Hello world from processor exp-9-44, rank 250 out of 256 processors
+Hello world from processor exp-9-43, rank 119 out of 256 processors
+
+---- BEGIN time and date information ----
+Job started at Mon Jan 29 12:01:40 PST 2024 / epoch time: 1706558500
+Job ended at Mon Jan 29 12:01:54 PST 2024 / epoch time: 1706558514
+Elapsed time: 14
+---- END time and date information ----

@@ -1,0 +1,6 @@
+# This information is specific to the SDSC Expanse system, but could
+# be easily modified for other compilers, MPI libraries and versions.
+
+module load gcc/10.2.0
+module load mvapich2/2.3.7
+mpicc -o hello_mpi hello_mpi.c

@@ -1,0 +1,47 @@
+#!/bin/bash
+#SBATCH --job-name="hello_mpi"
+#SBATCH --output="hello_mpi.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=128
+#SBATCH --mem=249000M 
+#SBATCH --account=<<your-project-id>>
+#SBATCH --export=ALL
+#SBATCH -t 00:01:00
+
+#This job runs with 2 nodes, 128 cores per node for a total of 256 tasks.
+
+#Load module file(s) into the shell environment
+module purge
+module load cpu
+module load gcc/10.2.0
+module load mvapich2/2.3.7
+module load slurm
+
+# Supressing MVAPICH warnings
+export MV2_SUPPRESS_JOB_STARTUP_PERFORMANCE_WARNING=1
+export MV2_USE_RDMA_CM=0
+
+echo "---- BEGIN Slurm, hardware and environment information ----"
+echo "SLURM_JOB_ID: $SLURM_JOB_ID"
+echo "SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST"
+lscpu
+printenv
+echo "---- END Slurm, hardware and environment information ----"
+echo
+
+timedate_start=`date`
+epoch_start=`date +%s`
+
+srun --mpi=pmi2 -n 256 ./hello_mpi
+
+timedate_end=`date`
+epoch_end=`date +%s`
+t_elapsed=$((epoch_end-epoch_start))
+
+echo
+echo "---- BEGIN time and date information ----"
+echo "Job started at $timedate_start / epoch time: $epoch_start"
+echo "Job ended at $timedate_end / epoch time: $epoch_end"
+echo "Elapsed time: $t_elapsed"
+echo "---- END time and date information ----"
