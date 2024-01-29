@@ -20,14 +20,17 @@ echo
 Add the following before the executing your code
 
 ```
-timedate_end=`date`
-epoch_end=`date +%s`
-t_elapsed=$((epoch_end-epoch_start))
+timedate_start=`date`
+epoch_start=`date +%s`
 ```
 
 And the following after executing your code
 
 ```
+timedate_end=`date`
+epoch_end=`date +%s`
+t_elapsed=$((epoch_end-epoch_start))
+
 echo
 echo "---- BEGIN time and date information ----"
 echo "Job started at $timedate_start / epoch time: $epoch_start"
