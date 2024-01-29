@@ -1,7 +1,3 @@
 # HPC-security-help
 
-This repository accompanies the HPC Security and Getting Help talk that is offered by SDSC and delivered through XSEDE, SDSC's COMPLECS project and other venues. It currently contains examples illustrating the use of awk, grep, head, paste, sed, sort, shuf, split and tail, along with several more realistic case studies that combine multiple tools.
-
-The purpose of this material is not to make anyone an expert in the use of any of the specific tools. Entire books have been written on awk and sed! Rather, the goal is to provide a brief overview of this collection of common Linux tools so that one can quickly get up to speed automating tediuous and error prone text manipulations.
-
-The case studies were developed for users working in a scientific computing environment, but should be useful to anyone looking for a gentle introduction.
+This repository accompanies the HPC Security and Getting Help talk that is offered by SDSC and delivered through XSEDE, SDSC's COMPLECS project and other venues. HPC systems are shared resources, therefore all users must be aware of the complexity of working in a shared environment and the implications associated with resource management and security. This module also addresses two essential and related sets of skills that should be a part of everyone’s toolbox, but that are frequently overlooked: (1) solving problems on your own leveraging online resources and (2) how to best work with the help desk or user support by properly collecting the information that can be used to help resolve your problem.
