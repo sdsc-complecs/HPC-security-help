@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name="hello_mpi"
-#SBATCH --output="hello_mpi.out"
+#SBATCH --output="hello_mpi.%j.out"
 #SBATCH --partition=compute
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=128
-#SBATCH --mem=249000M 
-#SBATCH --account=<<your-project-id>>
+#SBATCH --mem=249000M
+#SBATCH --account=use300
+####SBATCH --account=<<your-project-id>>
 #SBATCH --export=ALL
 #SBATCH -t 00:01:00
 
@@ -25,9 +26,16 @@ export MV2_USE_RDMA_CM=0
 echo "---- BEGIN Slurm, hardware and environment information ----"
 echo "SLURM_JOB_ID: $SLURM_JOB_ID"
 echo "SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST"
+echo
 lscpu
+echo
 printenv
 echo "---- END Slurm, hardware and environment information ----"
+echo
+
+echo "---- BEGIN module listing ----"
+module list
+echo "---- END module listing ----"
 echo
 
 timedate_start=`date`
